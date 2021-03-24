@@ -1,6 +1,6 @@
 {
   "name": "sala-de-juegos",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
@@ -32,7 +32,7 @@
     "zone.js": "~0.10.3",
     "typescript": "~3.9.5",
     "@angular/cli": "~10.0.8",
-    "@angular/compiler-cli": "~10.0.14",
+    "@angular/compiler-cli": "~10.0.14"
   },
   "devDependencies": {
     "@angular-devkit/architect": ">= 0.900 < 0.1200",
@@ -58,7 +58,7 @@
     "tslint": "~6.1.0"
   },
   "engines": {
-    "node": "v12.21.0",
+    "node": "12.21.0",
     "npm": "7.7.0"
   }
 }
