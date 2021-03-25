@@ -16,6 +16,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './header/header.component';
 import { GamesComponent } from './games/games.component';
+import { PptComponent } from './ppt/ppt.component';
 
 
 
@@ -28,7 +29,8 @@ import { GamesComponent } from './games/games.component';
     WhoAmIComponent,
     RegisterComponent,
     HeaderComponent,
-    GamesComponent
+    GamesComponent,
+    PptComponent
   ],
   imports: [
     BrowserModule,
