@@ -8,10 +8,10 @@ import { SessionService } from "../services/session/session.service";
 })
 export class RegisterComponent implements OnInit {
 
-  password: string;
-  firstName: string;
-  lastName: string;
-  email: string;
+  public password: string;
+  public firstName: string;
+  public lastName: string;
+  public email: string;
 
   constructor(private session: SessionService) { }
 
@@ -19,6 +19,9 @@ export class RegisterComponent implements OnInit {
   }
 
 
+  public register() {
+
+  }
   
 
 
