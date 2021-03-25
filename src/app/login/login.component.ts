@@ -17,38 +17,38 @@ export class LoginComponent implements OnInit {
   user: User;
 
   constructor(private sessionService: SessionService,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
 
 
-/**
- * login
- */
-public login() {
-  this.sessionService.login(this.email, this.password)
-  .then(result => {
-    this.router.navigate([''])
-    .then(route => {
-      console.log('Routing successful');
-    })
-    .catch(err => {
-      throw new Error("Routing error");
-    })
-  })
-  .catch(err => {
-    throw new Error('Email / contraseña incorrecto');
-  })
-}
+  /**
+   * login
+   */
+  public login() {
+    this.sessionService.login(this.email, this.password)
+      .then(result => {
+        this.router.navigate([''])
+          .then(route => {
+            console.log('Routing successful');
+          })
+          .catch(err => {
+            throw new Error("Routing error");
+          })
+      })
+      .catch(err => {
+        throw new Error('Email / contraseña incorrecto');
+      })
+  }
 
-/**
- * loadAdmin
- */
-public loadAdmin() {
-  this.email = 'admin@utn.com';
-  this.password = 'admin1234';
-}
-  
+  /**
+   * loadAdmin
+   */
+  public loadAdmin() {
+    this.email = 'admin@utn.com';
+    this.password = 'admin1234';
+  }
+
 }

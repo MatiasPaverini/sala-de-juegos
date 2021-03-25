@@ -7,7 +7,7 @@ import { WhoAmIComponent } from './who-am-i/who-am-i.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent }, 
-  { path: 'whoAmI', component: WhoAmIComponent },
+  { path: 'whoami', component: WhoAmIComponent },
   { path: 'register', component: RegisterComponent},
   { path: '', component: MainComponent },
 ];
