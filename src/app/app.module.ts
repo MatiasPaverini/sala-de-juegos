@@ -10,7 +10,8 @@ import { UserComponent } from './user/user.component';
 import { MainComponent } from './main/main.component';
 import { WhoAmIComponent } from './who-am-i/who-am-i.component';
 import { RegisterComponent } from './register/register.component';
-import { SessionService } from "./services/session.service";
+import { SessionService } from "./services/session/session.service";
+import { GamesService } from "./services/games/games.service";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
@@ -40,7 +41,8 @@ import { PptComponent } from './ppt/ppt.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],
-  providers: [SessionService],
+  providers: [SessionService,
+    GamesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
