@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { User } from "../user/user";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +22,12 @@ export class SessionService {
   /**
    * register
    */
-  public register(user: User) {
-    return this.firebase.createUserWithEmailAndPassword(user.getEmail(), user.getPassword());
+  public register(email:string, password: string) {
+    return this.firebase.createUserWithEmailAndPassword(email, password);
+  }
+
+  public saveUserData(user: User) {
+    return this.firebase
   }
 
 

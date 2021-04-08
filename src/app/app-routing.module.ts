@@ -6,10 +6,11 @@ import { RegisterComponent } from './register/register.component';
 import { WhoAmIComponent } from './who-am-i/who-am-i.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent }, 
+  { path: 'login', component: LoginComponent },
   { path: 'whoami', component: WhoAmIComponent },
-  { path: 'register', component: RegisterComponent},
-  { path: '', component: MainComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'main', component: MainComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
 @NgModule({
