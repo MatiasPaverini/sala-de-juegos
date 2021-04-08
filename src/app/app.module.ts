@@ -11,13 +11,11 @@ import { MainComponent } from './main/main.component';
 import { WhoAmIComponent } from './who-am-i/who-am-i.component';
 import { RegisterComponent } from './register/register.component';
 import { SessionService } from "./services/session/session.service";
-import { GamesService } from "./services/games/games.service";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
 import { HeaderComponent } from './header/header.component';
-import { GamesComponent } from './games/games.component';
-import { PptComponent } from './ppt/ppt.component';
+import { GamesModule } from "./games/games.module";
 
 
 
@@ -29,9 +27,7 @@ import { PptComponent } from './ppt/ppt.component';
     MainComponent,
     WhoAmIComponent,
     RegisterComponent,
-    HeaderComponent,
-    GamesComponent,
-    PptComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -40,9 +36,9 @@ import { PptComponent } from './ppt/ppt.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    GamesModule
   ],
-  providers: [SessionService,
-    GamesService],
+  providers: [SessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
