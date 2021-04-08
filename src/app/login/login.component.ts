@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   public login() {
     this.sessionService.login(this.email, this.password)
       .then(result => {
-        this.router.navigate([''])
+        this.router.navigate(['main'])
           .then(route => {
             console.log('Routing successful');
           })
